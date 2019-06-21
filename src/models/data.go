@@ -3,6 +3,9 @@ package models
 //表的设计和创建
 import (
 	"time"
+
+	"log"
+
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql"
@@ -42,9 +45,10 @@ func init() {
 	dbport := beego.AppConfig.String("dbport")
 	dbuser := beego.AppConfig.String("dbuser")
 	dbpassword := beego.AppConfig.String("dbpassword")
-	dbname :=beego.AppConfig.String("dbname")
+	dbname := beego.AppConfig.String("dbname")
 
-	dsn := dbuser + ":" +dbpassword +"@tcp("+dbhost+":"+dbport+")/"+dbname+"?charset=utf8&loc=Asia%2FShanghai"
+	dsn := dbuser + ":" + dbpassword + "@tcp(" + dbhost + ":" + dbport + ")/" + dbname + "?charset=utf8&loc=Asia%2FShanghai"
+	log.Println(dsn)
 	orm.RegisterDataBase("default", "mysql", dsn)
 	//注册表
 	orm.RegisterModel(new(User), new(Article), new(ArticleType))

@@ -1,0 +1,45 @@
+# code2/newsWeb/controllers v0.0.0 => ./controllers
+code2/newsWeb/controllers
+# code2/newsWeb/models v0.0.0 => ./models
+code2/newsWeb/models
+# code2/newsWeb/routers v0.0.0 => ./routers
+code2/newsWeb/routers
+# github.com/astaxie/beego v1.11.1
+github.com/astaxie/beego
+github.com/astaxie/beego/orm
+github.com/astaxie/beego/context
+github.com/astaxie/beego/config
+github.com/astaxie/beego/context/param
+github.com/astaxie/beego/grace
+github.com/astaxie/beego/logs
+github.com/astaxie/beego/session
+github.com/astaxie/beego/toolbox
+github.com/astaxie/beego/utils
+# github.com/go-sql-driver/mysql v1.4.1
+github.com/go-sql-driver/mysql
+# github.com/gopherjs/gopherjs v0.0.0-20181017120253-0766667cb4d1
+github.com/gopherjs/gopherjs/js
+# github.com/jtolds/gls v4.20.0+incompatible
+github.com/jtolds/gls
+# github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d
+github.com/smartystreets/assertions
+github.com/smartystreets/assertions/internal/go-render/render
+github.com/smartystreets/assertions/internal/oglematchers
+# github.com/smartystreets/goconvey v0.0.0-20190330032615-68dc04aab96a
+github.com/smartystreets/goconvey/convey
+github.com/smartystreets/goconvey/convey/reporting
+github.com/smartystreets/goconvey/convey/gotest
+# golang.org/x/crypto v0.0.0-20190605123033-f99c8df09eb5
+golang.org/x/crypto/acme/autocert
+golang.org/x/crypto/acme
+# golang.org/x/net v0.0.0-20190603091049-60506f45cf65
+golang.org/x/net/idna
+# golang.org/x/text v0.3.2 => github.com/golang/text v0.3.2
+golang.org/x/text/secure/bidirule
+golang.org/x/text/unicode/bidi
+golang.org/x/text/unicode/norm
+golang.org/x/text/transform
+# google.golang.org/appengine v1.6.1 => github.com/golang/appengine v1.6.1
+google.golang.org/appengine/cloudsql
+# gopkg.in/yaml.v2 v2.2.2
+gopkg.in/yaml.v2

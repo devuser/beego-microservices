@@ -11,5 +11,7 @@ RUN apk update && apk add git \
 FROM alpine:latest
 WORKDIR /app
 COPY --from=builder /app/app .
+RUN mkdir conf
+COPY --from=builder /app/conf/app.conf ./conf
 EXPOSE 80
 CMD ["./app"]

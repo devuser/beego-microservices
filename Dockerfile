@@ -12,6 +12,7 @@ FROM alpine:latest
 WORKDIR /app
 COPY --from=builder /app/app .
 COPY --from=builder /app/src/static .
+COPY --from=builder /app/src/views .
 RUN mkdir conf
 COPY --from=builder /app/src/conf/app.conf ./conf
 EXPOSE 80

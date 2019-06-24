@@ -43,6 +43,8 @@ func init() {
 	// orm.RegisterDataBase("default", "mysql", "root:root@tcp(172.17.0.3:3306)/newsWeb")
 	// MYSQL_SERVICE_HOST
 	envHost := os.Getenv("MYSQL_SERVICE_HOST")
+	envPassword := os.Getenv("MYSQL_SERVICE_PASSWORD")
+	envUser := os.Getenv("MYSQL_SERVICE_USER")
 
 	dbhost := beego.AppConfig.String("dbhost")
 	if envHost != "" {
@@ -50,9 +52,18 @@ func init() {
 	}
 	dbport := beego.AppConfig.String("dbport")
 	dbuser := beego.AppConfig.String("dbuser")
+	if envUser != "" {
+		dbuser = envUser
+	}
 	dbpassword := beego.AppConfig.String("dbpassword")
+	if envPassword != "" {
+		dbpassword = envPassword
+	}
+	envDbname := os.Getenv("MYSQL_SERVICE_DATABASE")
 	dbname := beego.AppConfig.String("dbname")
-
+	if envDbname != "" {
+		dbname = envDbname
+	}
 	dsn := dbuser + ":" + dbpassword + "@tcp(" + dbhost + ":" + dbport + ")/" + dbname + "?charset=utf8"
 	log.Println(dsn)
 	orm.RegisterDataBase("default", "mysql", dsn)

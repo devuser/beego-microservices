@@ -2,8 +2,10 @@ package models
 
 //表的设计和创建
 import (
-	"log"
+	"os"
 	"time"
+
+	"log"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
@@ -39,8 +41,13 @@ type ArticleType struct {
 func init() {
 	//注册数据库
 	// orm.RegisterDataBase("default", "mysql", "root:root@tcp(172.17.0.3:3306)/newsWeb")
+	// MYSQL_SERVICE_HOST
+	envHost := os.Getenv("MYSQL_SERVICE_HOST")
 
 	dbhost := beego.AppConfig.String("dbhost")
+	if envHost != "" {
+		dbhost = envHost
+	}
 	dbport := beego.AppConfig.String("dbport")
 	dbuser := beego.AppConfig.String("dbuser")
 	dbpassword := beego.AppConfig.String("dbpassword")
